@@ -7,5 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kjartan Kristjansson",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjarisk/react-startup.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/kjarisk/react-startup/issues"
+  },
+  "homepage": "https://github.com/kjarisk/react-startup#readme"
 }
