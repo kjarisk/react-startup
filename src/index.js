@@ -1,7 +1,20 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 import '@babel/polyfill';
+import DefaultErrorBoundary from './DefaultErrorBoundary';
 import App from './App';
 import './styles.css';
 
-ReactDom.render(<App />, document.getElementById('app'));
+if (process.env.NODE_ENV === 'development') {
+  const axe = require('react-axe');
+  axe(React, ReactDOM, 1000);
+}
+
+ReactDOM.render(
+  <React.StrictMode>
+    <DefaultErrorBoundary>
+      <App />
+    </DefaultErrorBoundary>
+  </React.StrictMode>,
+  document.getElementById('app')
+);
